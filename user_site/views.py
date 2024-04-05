@@ -29,7 +29,6 @@ class UserSiteView(generics.CreateAPIView):
 class TakeSiteAndRepresentView(generics.RetrieveAPIView):
     """Uses only 'GET' method. For the first access to the site."""
     queryset = UserSite.objects.all()
-    serializer_class = UserSiteStatisticsSerializer
     permission_classes = [IsAuthenticated, IsOwnerOr404]
 
     def get(self, request, *args, **kwargs):

@@ -46,7 +46,6 @@ def count_site_data(site, request, content):
     site.statistics.clicks_number += 1
     site.statistics.data_size += (output_size + len(content))
     site.statistics.save()
-    print(site.statistics)
 
 
 def get_method(request):

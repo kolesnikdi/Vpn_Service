@@ -6,7 +6,7 @@ from django.dispatch import receiver
 
 class UserSite(models.Model):
     owner = models.ForeignKey('registration.WebUser', related_name='user_sites', on_delete=models.CASCADE)
-    site_url = models.URLField(max_length=20, unique=True, validators=[URLValidator()])
+    site_url = models.URLField(max_length=50, validators=[URLValidator()])
     name = models.CharField('site_name', max_length=30, unique=True)
 
 

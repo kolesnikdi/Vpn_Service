@@ -15,4 +15,3 @@ class TestView:
         url = reverse('vpn_service', args=[site.name, 'espreso.tv/news/'])
         response = authenticated_client.get(url, format='json')
         assert response.status_code == 200
-
